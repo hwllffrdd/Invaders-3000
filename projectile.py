@@ -4,7 +4,7 @@ class Projectile(Turtle):
     def __init__(self, position, owner):
         super().__init__()
         self.shape("square")
-        self.color("red" if owner == "shooter" else "blue")
+        self.color("blue" if owner == "shooter" else "red")
         self.shapesize(stretch_wid=1, stretch_len=0.2)
         self.penup()
         self.goto(position)
@@ -12,7 +12,7 @@ class Projectile(Turtle):
 
 
     def move(self):
-        new_y = self.ycor() + 3 if self.owner == "shooter" else self.ycor() - 3
+        new_y = self.ycor() + 5 if self.owner == "shooter" else self.ycor() - 3
         self.goto(self.xcor(), new_y)
 
     def check_collision(self, obstacle):

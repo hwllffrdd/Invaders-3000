@@ -47,7 +47,7 @@ pattern = [
     [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
 ]
 
-obstacle = Obstacle((-270, -150), pattern=pattern, repeat_times=5, piece_size=7)
+obstacle = Obstacle((-270, -180), pattern=pattern, repeat_times=5, piece_size=7)
 
 fleet = Fleet(rows=3, cols=10, start_position=(-200, 350), shape_image=resource_path("invader.gif"), h_space=40, v_space=40)
 

@@ -31,7 +31,7 @@ class Fleet:
                 if invader.is_alive:
                     invader.move(0, -self.descend_distance)
                     # Check if the invaders reached the bottom of the screen
-                    if invader.ycor() < -150:
+                    if invader.ycor() < -165:
                         game_over = True
                         return "game_over"
 
