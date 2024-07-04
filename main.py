@@ -4,15 +4,17 @@ from obstacle import Obstacle
 from fleet import Fleet
 from display import Display, display_message
 import random
+from utils import resource_path
+
 
 screen = turtle.Screen()
 screen.setup(width=600, height=800)
 screen.bgcolor("black")
-screen.title("")
+screen.title("Invaders 3000")
 screen.tracer(0)
 
-screen.addshape("shooter.gif")
-screen.addshape("invader.gif")
+screen.addshape(resource_path("shooter.gif"))
+screen.addshape(resource_path("invader.gif"))
 
 shooter_projectiles = []
 invader_projectiles = []
@@ -47,7 +49,7 @@ pattern = [
 
 obstacle = Obstacle((-270, -150), pattern=pattern, repeat_times=5, piece_size=7)
 
-fleet = Fleet(rows=3, cols=10, start_position=(-200, 350), shape_image="invader.gif", h_space=40, v_space=40)
+fleet = Fleet(rows=3, cols=10, start_position=(-200, 350), shape_image=resource_path("invader.gif"), h_space=40, v_space=40)
 
 
 # Function to move all projectiles and check for collisions

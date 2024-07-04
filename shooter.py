@@ -2,11 +2,12 @@ import time
 from turtle import Turtle
 import display
 from projectile import Projectile
+from utils import resource_path
 
 class Shooter(Turtle):
     def __init__(self, position, shoot_callback, display):
         super().__init__()
-        self.custom_shape = "shooter.gif"
+        self.custom_shape = resource_path("shooter.gif")
         self.shape(self.custom_shape)
         self.color("white")
         self.penup()
